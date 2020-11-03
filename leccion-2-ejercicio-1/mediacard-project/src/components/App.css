@@ -1,0 +1,65 @@
+.App {
+  background-color: rgb(243, 243, 243);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.card {
+  width: 350px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cardImg {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.cardTitle {
+  font-size: 20px;
+  color: rgb(92, 88, 88);
+  margin-left: 20px;
+}
+
+.cardInfo {
+  font-size: 15px;
+  color: rgb(155, 151, 151);
+  margin-left: 20px;
+}
+
+.cardBody {
+  margin: 30px 0;
+}
+
+.cardParagraph {
+  color: rgb(48, 36, 77);
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardFooter-paragraph {
+  color: rgb(48, 36, 77);
+}
+
+.cardContainer-likes {
+  display: flex;
+  align-items: center;
+}
+
+.cardHeart-icon {
+  font-size: 20px;
+  color: rgb(238, 17, 17);
+  margin-left: 10px;
+}

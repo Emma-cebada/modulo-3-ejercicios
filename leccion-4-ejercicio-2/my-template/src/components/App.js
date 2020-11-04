@@ -3,9 +3,6 @@ import HalfPage from "./HalfPage";
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="App">

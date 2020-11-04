@@ -9,7 +9,7 @@ const Mediacard = props => {
             alt="Imagen de Joel"
             src={props.image}></img>
           <div className="cardData">
-            <h2 className="cardTitle">{this.props.name}</h2>
+            <h2 className="cardTitle">{props.name}</h2>
             <p className="cardInfo"> {props.info}</p>
           </div>
         </header>
@@ -20,7 +20,7 @@ const Mediacard = props => {
           <p className="cardFooter-paragraph">{props.footerParagaph}</p>
           <div className="cardContainer-likes">
             <p className="cardNumber">{props.number}</p>
-            {/* <i class="fas fa-heart cardHeart-icon"></i> */}
+            {/* <i class="fas fa-heart cardHeart-icon">{props.heart}</i> */}
             <p className="cardHeart-icon">{props.heart}</p>
           </div>
         </footer>

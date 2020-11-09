@@ -1,0 +1,13 @@
+* {
+  padding: 10px;
+}
+
+.input {
+  width: 250px;
+  height: 50px;
+  border: 5px solid blue;
+}
+
+.paragraphText {
+  color: blue;
+}

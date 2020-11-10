@@ -10,12 +10,11 @@ class ProductList extends React.Component {
     console.log("Me han clickado", ev);
   }
 
-
   render() {
     return (
       <article className="shelves__article">
         <div className="shelves__article--imgContainer">
-          <img className="shelves__article--img" src="./images/tshirt-simple-by_vexels.png" />
+          <img className="shelves__article--img" src={this.props.src} alt="Imagen del producto" />
         </div>
         <h3 className="shelves__article--title">{this.props.title}</h3>
         <div className="shelves__article--buyPanel">

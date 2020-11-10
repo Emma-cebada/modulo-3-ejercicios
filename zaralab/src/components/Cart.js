@@ -1,4 +1,5 @@
 import React from 'react';
+import CartItem from './CartItem';
 
 class Cart extends React.Component {
   render() {
@@ -6,11 +7,7 @@ class Cart extends React.Component {
       <section className="cart">
         <h3 className="cart__title">Cesta de la compra</h3>
         <ul className="cart__list">
-          <li className="cart__list--item">
-            <span className="cartListItem__concept">Camiseta</span>
-            <span className="cartListItem__amount">x 1</span>
-            <span className="cartListItem__price">69€</span>
-          </li>
+          <CartItem title="Camiseta" amount={1} price={69} />
         </ul>
       </section>
     );

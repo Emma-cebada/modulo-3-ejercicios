@@ -5,9 +5,9 @@ class ClubList extends React.Component {
   render() {
     console.log(this.props.clubs);
 
-    const items = this.props.clubs.map(club => {
+    const items = this.props.clubs.map((club, index) => {
       return (
-        <li key={club.id} className="card">
+        <li key={club.id} id={index} className="card" title={club.name}>
           <Club club={club} />
         </li>
       )

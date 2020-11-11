@@ -6,7 +6,8 @@ class App extends React.Component {
   render() {
     console.log(clubs);
     return (
-      <div className="App">
+      <div>
+        App
         <ClubList clubs={clubs} />
       </div>
     );

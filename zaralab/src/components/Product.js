@@ -3,11 +3,43 @@ import React from 'react';
 class ProductList extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      stylingSize: "buyPanel__size",
+      stylingAmount: "buyPanel__amount"
+    }
     this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
   handleClick(ev) {
     const shoppingButton = ev.currentTarget;
     console.log("Me han clickado", ev);
+    this.setState((prevState, props) => {
+      let nextStyling;
+      if (prevState.stylingSize === "buyPanel__size") {
+        nextStyling = ""
+      } else {
+        nextStyling = "buyPanel__size";
+      }
+      return {
+        stylingSize: nextStyling
+      };
+    });
+  }
+
+  handleChange(ev) {
+    const selectSize = ev.currentTarget.value;
+    console.log("Me han clickado", ev);
+    this.setState((prevState, props) => {
+      let nextStyling;
+      if (prevState.stylingAmount === "buyPanel__amount") {
+        nextStyling = ""
+      } else {
+        nextStyling = "buyPanel__amount";
+      }
+      return {
+        stylingAmount: nextStyling
+      };
+    })
   }
 
   render() {
@@ -18,9 +50,9 @@ class ProductList extends React.Component {
         </div>
         <h3 className="shelves__article--title">{this.props.title}</h3>
         <div className="shelves__article--buyPanel">
-          <div className="buyPanel__size">
+          <div className={this.state.stylingSize}>
             <h4 className="buyPanel__section--title">Talla:</h4>
-            <select name="" id="" className="buyPanel__size--select">
+            <select name="" id="" className="buyPanel__size--select" onChange={this.handleChange}>
               <option value="" disabled selected>
                 Escoge:
                       </option>
@@ -31,7 +63,7 @@ class ProductList extends React.Component {
               <option value="XL">XL</option>
             </select>
           </div>
-          <div className="buyPanel__amount">
+          <div className={this.state.stylingAmount}>
             <h4 className="buyPanel__section--title">Cantidad:</h4>
             <button className="buyPanel__amount--add">+</button>
             <input type="text" name="" id="" className="buyPanel__amount--number" value="2" />

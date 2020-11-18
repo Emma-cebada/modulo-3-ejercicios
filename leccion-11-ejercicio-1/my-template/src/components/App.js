@@ -5,8 +5,6 @@ import Home from './Home';
 import Pricing from './Pricing';
 import About from './About';
 
-
-
 class App extends React.Component {
 
   render() {
@@ -30,7 +28,7 @@ class App extends React.Component {
         </header>
         <main>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route path="/" exact component={Home} />
             <Route path="/pricing" component={Pricing} />
             <Route path="/about" component={About} />
           </Switch>
